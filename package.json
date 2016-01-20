@@ -1,9 +1,9 @@
 {
-  "name": "gates_of_trenor",
+  "name": "Gates of Trenor",
   "version": "1.0.0",
   "description": "Card Game",
-  "repository": "https://github.com/dverg/gates_of_trenor",
-  "main": "index.js",
+  "repository": "https://github.com/dverg/GatesOfTrenor",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

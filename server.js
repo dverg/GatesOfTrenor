@@ -26,11 +26,14 @@ server.register(require('inert'), (err) => {
 
 		server.route({
 				method: 'GET',
-				path: '/html',
-				handler: function(request, reply){
-					return reply.file('views/game_table.html');
+				path: '/static/3rd/{file*}',
+				handler: {
+						directory: {
+								path: 'bower_components'
+						}
 				}
 		});
+
 });
 
 server.register({
