@@ -1,8 +1,100 @@
 <html>
 		<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+
 				<title>Gates of Trenor</title>
-				<script type="text/javascript" src="static/3rd/angular/angular.min.js" />
+				<script src="static/3rd/angular/angular.min.js" ></script>
+				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+				<style>
+					body {
+							background-color: #D9610B; 
+					}
+					.opponent-zone {
+							background-color: #F0A46E;
+							padding: 1px;
+					}
+					.player-zone {
+							background-color: #F0866E;
+							padding: 1px;
+					}
+					.battlefield-container  {
+							margin: 2em;
+					}
+					.road-container  {
+							margin: 2em;
+					}
+					.card-slot > p {
+							text-align: center;
+							background-color: #BF550A;
+							color: white;
+							margin: 0px 1em;
+							padding: 1em 0px;
+					}
+
+				</style>
+				<!-- Pure CSS -->
+				<!--[if lte IE 8]>
+					<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+				<![endif]-->
+				<!--[if gt IE 8]><!-->
+				   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+				<!--<![endif]-->
+				<!-- END Pure Css -->
 		</head>
 		<body>
+		<div class="opponent-zone">
+				<p> Opponent zone</p>
+				<div class="road-container">
+						<div class="pure-g road-grid">
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+						</div>
+				</div>
+				<div class="battlefield-container">
+						<div class="pure-g battlefield-grid">
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+						</div>
+				</div>
+		</div>
+		<div class="player-zone">
+				<p> Player zone</p>
+				<div class="battlefield-container">
+						<div class="pure-g battlefield-grid">
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+								<div class="pure-u-1-5 card-slot"><p>battle</p></div>
+						</div>
+				</div>
+				<div class="road-container">
+						<div class="pure-g road-grid">
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+								<div class="pure-u-1-5 card-slot"><p>road</p></div>
+						</div>
+				</div>
+				<div class="hand-container">
+						Hand
+						<div class="pure-g hand-grid">
+								<div class="pure-u-1-5 card-slot"><p>hand</p></div>
+								<div class="pure-u-1-5 card-slot"><p>hand</p></div>
+								<div class="pure-u-1-5 card-slot"><p>hand</p></div>
+								<div class="pure-u-1-5 card-slot"><p>hand</p></div>
+								<div class="pure-u-1-5 card-slot"><p>hand</p></div>
+						</div>
+				</div>
+		</div>
 		</body>
 </html>

@@ -12,10 +12,25 @@ server.connection({
 // Routes (more to come)
 server.route({
 		method: 'GET',
-		path: '/',
+		path: '/XX', // TODO
 		handler: function(request, reply){
-				return reply('Hello æ <');
+				// TODO No view yet.
+				return reply.view('xx');
 		}
+});
+
+// Views served from here
+server.register(require('vision'), (err) => {
+		if(err){
+				throw err;
+		}
+
+		server.views({
+				engines: {
+						html: require('handlebars')
+				},
+				path: 'views'
+			});
 });
 
 // Static files served from here
@@ -24,6 +39,13 @@ server.register(require('inert'), (err) => {
 				throw err;
 		}
 
+		server.route({
+				method: 'GET',
+				path: '/',
+				handler: function(request, reply){
+						return reply.file('views/index.html');
+				}
+		});
 		server.route({
 				method: 'GET',
 				path: '/static/3rd/{file*}',
