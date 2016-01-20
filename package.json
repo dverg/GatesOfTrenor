@@ -1,0 +1,20 @@
+{
+  "name": "gates_of_trenor",
+  "version": "1.0.0",
+  "description": "Card Game",
+  "repository": "https://github.com/dverg/gates_of_trenor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kristian F. Schmidt",
+  "license": "ISC",
+  "dependencies": {
+    "good": "^6.4.0",
+    "good-console": "^5.2.0",
+    "handlebars": "^4.0.5",
+    "hapi": "^12.1.0",
+    "inert": "^3.2.0",
+    "vision": "^4.0.1"
+  }
+}
