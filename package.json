@@ -1,5 +1,5 @@
 {
-  "name": "Gates of Trenor",
+  "name": "GatesOfTrenor",
   "version": "1.0.0",
   "description": "Card Game",
   "repository": "https://github.com/dverg/GatesOfTrenor",
@@ -15,6 +15,7 @@
     "handlebars": "^4.0.5",
     "hapi": "^12.1.0",
     "inert": "^3.2.0",
+    "socket.io": "^1.4.4",
     "vision": "^4.0.1"
   }
 }
