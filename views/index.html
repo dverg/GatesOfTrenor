@@ -5,6 +5,9 @@
 
 				<title>Gates of Trenor</title>
 				<script src="static/3rd/b/angular/angular.min.js" ></script>
+				<script src="static/3rd/b/handlebars/handlebars.min.js" ></script>
+				<script src="static/3rd/b/jquery/dist/jquery.min.js" ></script>
+				<script src="static/3rd/b/jquery-ui/jquery-ui.min.js" ></script>
 				<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
 				<!-- Pure CSS -->
@@ -63,6 +66,7 @@
 				<div class="hand-container">
 						Hand
 						<div class="pure-g hand-grid">
+
 								<div class="pure-u-1-5 card-slot">
 										<p>
 										<img class="card-img" src="static/images/1.jpg" />
@@ -83,5 +87,12 @@
 </div>
 		</script>
 
+		<script type="text/javascript">
+			var source = $("#card-template").html();
+			var template = Handlebars.compile(source);
+			var context = { title: "Super card", id: 2 };
+			var html = template(context);
+			$(".hand-grid > .card-slot:first").html(html);
+		</script>
 		</body>
 </html>
