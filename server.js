@@ -48,15 +48,24 @@ server.register(require('inert'), (err) => {
 		});
 		server.route({
 				method: 'GET',
-				path: '/static/3rd/{file*}',
+				path: '/static/3rd/b/{file*}',
 				handler: {
 						directory: {
 								path: 'bower_components'
 						}
 				}
 		});
-
+		server.route({
+				method: 'GET',
+				path: '/static/{file*}',
+				handler: {
+						directory: {
+								path: 'static'
+						}
+				}
+		});
 });
+// End inert
 
 server.register({
 		register: Good,
@@ -74,7 +83,6 @@ server.register({
 				throw err;
 		}
 
-		
 
 		server.start(() => {
 				console.log('info', 'Server running at :', server.info.uri);

@@ -1,0 +1,30 @@
+body {
+	background-color: #D9610B; 
+}
+.opponent-zone {
+	background-color: #F0A46E;
+	padding: 1px;
+}
+.player-zone {
+	background-color: #F0866E;
+	padding: 1px;
+}
+.battlefield-container  {
+	margin: 2em;
+}
+.hand-container  {
+	margin: 2em;
+}
+.road-container  {
+	margin: 2em;
+}
+.card-slot > .card,
+.card-slot > p {
+	text-align: center;
+	background-color: #BF550A;
+	color: white;
+	margin: 0px 1em;
+	padding: 1em 0px;
+}
+.card-img {
+}
