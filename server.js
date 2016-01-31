@@ -12,10 +12,21 @@ server.connection({
 // Routes (more to come)
 server.route({
 		method: 'GET',
-		path: '/XX', // TODO
+		path: '/deck/card/draw/{num?}',
 		handler: function(request, reply){
-				// TODO No view yet.
-				return reply.view('xx');
+				var cards = [];
+				const drawNum = request.params.num ?
+						request.params.num :
+						1;
+				for( var i=0; i < drawNum; i++ ) {
+						cards.push({
+								title: "Random card",
+								cardId: Math.ceil(Math.random()*56),
+								strength: Math.ceil(Math.random()*10),
+								speed: Math.ceil(Math.random()*10),
+						});
+				}
+				reply(cards);
 		}
 });
 
@@ -82,7 +93,6 @@ server.register({
 		if (err) {
 				throw err;
 		}
-
 
 		server.start(() => {
 				console.log('info', 'Server running at :', server.info.uri);

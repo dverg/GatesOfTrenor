@@ -1,5 +1,6 @@
 body {
 	background-color: #D9610B; 
+	font-color: #eee;
 }
 .opponent-zone {
 	background-color: #F0A46E;
@@ -18,6 +19,18 @@ body {
 .road-container  {
 	margin: 2em;
 }
+.card {
+		height: 18em;
+		position: relative;
+}
+.card-stats {
+		position: absolute;
+		bottom: 0.3em;
+		right: 0.3em;
+}
+.card-slot {
+	max-width: 230px;
+}
 .card-slot > .card,
 .card-slot > p {
 	text-align: center;
@@ -27,4 +40,9 @@ body {
 	padding: 1em 0px;
 }
 .card-img {
+		height: 15em;
+		max-width: 85%;
+}
+#hand-card-menu {
+		background-color: rgba(238, 119, 0, 0.92);
 }
