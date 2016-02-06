@@ -30,7 +30,7 @@ server.route({
 		}
 });
 
-// Views served from here
+// Views served from here. Not used.
 server.register(require('vision'), (err) => {
 		if(err){
 				throw err;
